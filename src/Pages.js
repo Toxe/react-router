@@ -19,9 +19,11 @@ function AllPages() {
         <div>
             <h1>Pages</h1>
             <ul>
-                <li><Link to="1">Page 1</Link></li>
-                <li><Link to="2">Page 2</Link></li>
-                <li><Link to="3">Page 3</Link></li>
+                {pages.map((pageId, idx) => (
+                    <li key={idx}>
+                        <Link to={pageId}>Page {pageId}</Link>
+                    </li>
+                ))}
             </ul>
         </div>
     );
