@@ -3,6 +3,7 @@
 ## Dependencies
 
 - React Router 6
+- styled-components
 
 ## Running the application
 
