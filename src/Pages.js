@@ -1,11 +1,15 @@
 import React from "react";
 import { Routes, Route, Link, useParams } from "react-router-dom";
+import NotFound from "./NotFound";
+
+const pages = ["1", "2", "3"];
 
 export default function Pages() {
     return (
         <Routes>
             <Route path="/" element={<AllPages />} />
             <Route path=":pageId" element={<SinglePage />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
     );
 }
@@ -25,6 +29,8 @@ function AllPages() {
 
 function SinglePage() {
     const { pageId } = useParams();
+
+    if (!pages.includes(pageId)) return <NotFound />;
 
     return (
         <div>
