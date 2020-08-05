@@ -35,6 +35,7 @@ function AllPages() {
                         <Link to={pageId}>Page {pageId}</Link>
                     </li>
                 ))}
+                <li><Link to="99">Page 99 (missing page)</Link></li>
             </ul>
         </Content>
     );

@@ -37,6 +37,7 @@ function AllUsers() {
                         <Link to={userId}>User {userId}</Link>
                     </li>
                 ))}
+                <li><Link to="99">User 99 (missing user)</Link></li>
             </ul>
             <Outlet />
         </Content>
