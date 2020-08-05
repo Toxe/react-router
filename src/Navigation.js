@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Nav = styled.div`
+const Nav = styled.nav`
     display: flex;
     padding: 10px;
     background: #d3d3ff;
