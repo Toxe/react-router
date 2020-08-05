@@ -1,5 +1,7 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import {} from "history";
 
 const Message = styled.div`
     background: red;
@@ -10,5 +12,16 @@ const Message = styled.div`
 `;
 
 export default function NotFound() {
-    return <Message>Resource not found.</Message>;
+    const navigate = useNavigate();
+
+    return (
+        <Message>
+            <div>Resource not found.</div>
+            <div>
+                <button type="button" onClick={() => navigate(-1)}>
+                    go back
+                </button>
+            </div>
+        </Message>
+    );
 }
