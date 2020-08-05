@@ -1,6 +1,17 @@
 import React from "react";
 import { Routes, Route, Link, useParams } from "react-router-dom";
+import styled from "styled-components";
 import NotFound from "./NotFound";
+
+const Content = styled.div`
+    background: #dcdeff;
+    padding: 10px;
+`;
+
+const Page = styled.div`
+    background: #babeff;
+    padding: 10px;
+`;
 
 const pages = ["1", "2", "3"];
 
@@ -16,7 +27,7 @@ export default function Pages() {
 
 function AllPages() {
     return (
-        <div>
+        <Content>
             <h1>Pages</h1>
             <ul>
                 {pages.map((pageId, idx) => (
@@ -25,7 +36,7 @@ function AllPages() {
                     </li>
                 ))}
             </ul>
-        </div>
+        </Content>
     );
 }
 
@@ -35,9 +46,9 @@ function SinglePage() {
     if (!pages.includes(pageId)) return <NotFound />;
 
     return (
-        <div>
+        <Page>
             <h1>Page {pageId}</h1>
             <p>Showing page {pageId}.</p>
-        </div>
+        </Page>
     );
 }
