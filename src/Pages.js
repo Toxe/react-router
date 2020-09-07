@@ -13,6 +13,11 @@ const Page = styled.div`
     padding: 10px;
 `;
 
+const Logo = styled.div`
+    background: #454545;
+    padding: 20px;
+`;
+
 const pages = ["1", "2", "3"];
 
 export default function Pages() {
@@ -50,6 +55,8 @@ function SinglePage() {
         <Page>
             <h1>Page {pageId}</h1>
             <p>Showing page {pageId}.</p>
+            <Logo><img src="/logo192.png" alt="Logo" /></Logo>
+            <p><a href="/logo192.png" download>download logo</a></p>
         </Page>
     );
 }
