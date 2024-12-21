@@ -1,4 +1,3 @@
-import React from "react";
 import { Routes, Route, Link, useParams, Outlet } from "react-router-dom";
 import styled from "styled-components";
 import NotFound from "./NotFound";

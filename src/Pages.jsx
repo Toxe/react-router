@@ -1,7 +1,7 @@
-import React from "react";
 import { Routes, Route, Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 import NotFound from "./NotFound";
+import reactLogo from './assets/react.svg'
 
 const Content = styled.div`
     background: #dcdeff;
@@ -55,8 +55,8 @@ function SinglePage() {
         <Page>
             <h1>Page {pageId}</h1>
             <p>Showing page {pageId}.</p>
-            <Logo><img src="/logo192.png" alt="Logo" /></Logo>
-            <p><a href="/logo192.png" download>download logo</a></p>
+            <Logo><img src={reactLogo} height="100px" alt="Logo" /></Logo>
+            <p><a href={reactLogo} download>download logo</a></p>
         </Page>
     );
 }
