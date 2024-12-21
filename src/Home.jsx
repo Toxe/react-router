@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 const Content = styled.div`
-    background: #fdb6b6;
+    background:rgb(227, 197, 255);
     padding: 10px;
 `;
 
 const Title = styled.h1``;
 
 const Text = styled.p`
-    background: #ffcece;
+    background:rgb(234, 216, 250);
     padding: 10px 0px 10px 0px;
 `;
 
